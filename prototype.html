@@ -582,13 +582,13 @@
                         <div class="flex-1 min-w-0">
                             <span class="text-xs font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded-full">Prijswijziging</span>
                             <h4 class="text-base font-bold text-text-main mt-1">Mobiel €29,99 → €34,99</h4>
-                            <p class="text-sm text-text-sub mt-1">47 documenten beïnvloed</p>
+                            <p class="text-sm text-text-sub mt-1">47 documenten beïnvloed • 4 varianten</p>
                             <p class="text-xs text-text-sub mt-2">Mark T. • 2 uur geleden</p>
                         </div>
                         <span class="material-symbols-outlined text-gray-400">chevron_right</span>
                     </div>
                 </div>
-                <div data-navigate="screen-ai-suggestion" class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 cursor-pointer hover:border-primary/20">
+                <div data-navigate="screen-ai-suggestion-legal" class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 cursor-pointer hover:border-primary/20">
                     <div class="flex items-start gap-3">
                         <div class="size-12 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
                             <span class="material-symbols-outlined">gavel</span>
@@ -596,13 +596,13 @@
                         <div class="flex-1 min-w-0">
                             <span class="text-xs font-bold text-blue-600 bg-blue-100 px-2 py-0.5 rounded-full">Legal</span>
                             <h4 class="text-base font-bold text-text-main mt-1">Nieuwe disclaimer tekst</h4>
-                            <p class="text-sm text-text-sub mt-1">12 documenten beïnvloed</p>
+                            <p class="text-sm text-text-sub mt-1">12 documenten beïnvloed • 2 varianten</p>
                             <p class="text-xs text-text-sub mt-2">Anna B. • 5 uur geleden</p>
                         </div>
                         <span class="material-symbols-outlined text-gray-400">chevron_right</span>
                     </div>
                 </div>
-                <div data-navigate="screen-ai-suggestion" class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 cursor-pointer hover:border-primary/20">
+                <div data-navigate="screen-ai-suggestion-campagne" class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 cursor-pointer hover:border-primary/20">
                     <div class="flex items-start gap-3">
                         <div class="size-12 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
                             <span class="material-symbols-outlined">campaign</span>
@@ -610,7 +610,7 @@
                         <div class="flex-1 min-w-0">
                             <span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">Campagne</span>
                             <h4 class="text-base font-bold text-text-main mt-1">Q4 Campagne teksten</h4>
-                            <p class="text-sm text-text-sub mt-1">28 documenten beïnvloed</p>
+                            <p class="text-sm text-text-sub mt-1">28 documenten beïnvloed • 3 varianten</p>
                             <p class="text-xs text-text-sub mt-2">System • 1 dag geleden</p>
                         </div>
                         <span class="material-symbols-outlined text-gray-400">chevron_right</span>
@@ -724,61 +724,99 @@
     </div>
 </div>
 
-<!-- ==================== SCREEN: AI SUGGESTION ==================== -->
+<!-- ==================== SCREEN: AI SUGGESTION (Mobiel Prijswijziging) ==================== -->
 <div id="screen-ai-suggestion" class="screen bg-background-light">
     <div class="flex flex-col h-full overflow-hidden">
         <header class="flex items-center justify-between bg-white pt-6 px-4 pb-4 border-b border-gray-100 shrink-0 z-10">
-            <button data-navigate="screen-home" class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100">
+            <button data-navigate="screen-approval-list" class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100">
                 <span class="material-symbols-outlined text-text-main">arrow_back</span>
             </button>
             <h2 class="text-text-main text-lg font-bold flex-1 text-center px-2">AI Wijzigingsvoorstel</h2>
             <span class="material-symbols-outlined text-primary w-10">auto_awesome</span>
         </header>
 
-        <main class="flex-1 overflow-y-auto p-4 pb-40">
-            <div class="flex flex-col items-center justify-center py-4">
-                <div class="flex items-center gap-4">
-                    <button id="prev-variant" class="size-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
-                        <span class="material-symbols-outlined text-[20px]">chevron_left</span>
-                    </button>
-                    <h3 class="text-text-main text-xl font-bold">Variant <span id="current-variant">1</span> van <span id="total-variants">4</span></h3>
-                    <button id="next-variant" class="size-8 flex items-center justify-center rounded-full bg-gray-100 text-text-main hover:bg-gray-200">
-                        <span class="material-symbols-outlined text-[20px]">chevron_right</span>
-                    </button>
-                </div>
-                <div class="flex gap-2 mt-3" id="variant-dots">
-                    <div class="h-1.5 w-1.5 rounded-full bg-text-main"></div>
-                    <div class="h-1.5 w-1.5 rounded-full bg-gray-300"></div>
-                    <div class="h-1.5 w-1.5 rounded-full bg-gray-300"></div>
-                    <div class="h-1.5 w-1.5 rounded-full bg-gray-300"></div>
+        <main class="flex-1 overflow-y-auto p-4 pb-44">
+            <!-- Context Block - Shows what task we're working on -->
+            <div class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 mb-4">
+                <div class="flex items-start gap-3">
+                    <div class="size-12 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
+                        <span class="material-symbols-outlined">price_change</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <span class="text-xs font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded-full">Prijswijziging</span>
+                        <h4 class="text-base font-bold text-text-main mt-1">Mobiel €29,99 → €34,99</h4>
+                        <p class="text-sm text-text-sub mt-1">47 documenten beïnvloed</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-6 mt-2">
+            <!-- Variant Navigation -->
+            <div class="flex flex-col items-center justify-center py-3">
+                <div class="flex items-center gap-4">
+                    <button id="prev-variant" class="size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
+                        <span class="material-symbols-outlined text-[24px]">chevron_left</span>
+                    </button>
+                    <h3 class="text-text-main text-xl font-bold">Variant <span id="current-variant">1</span> van <span id="total-variants">4</span></h3>
+                    <button id="next-variant" class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20">
+                        <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+                    </button>
+                </div>
+                <div class="flex gap-2 mt-3" id="variant-dots">
+                    <div class="h-2 w-2 rounded-full bg-text-main"></div>
+                    <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                    <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                    <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-2">
+                <!-- Current Text - White box for better visibility -->
                 <div class="relative">
-                    <div class="absolute -left-3 top-4 bottom-4 w-1 rounded-full bg-gray-200"></div>
-                    <div class="bg-gray-100 rounded-xl p-5">
+                    <div class="bg-white rounded-xl p-5 shadow-soft border border-gray-200">
                         <div class="flex items-center gap-2 mb-3">
                             <span class="material-symbols-outlined text-gray-500 text-[18px]">history</span>
                             <p class="text-gray-500 text-xs font-bold uppercase">Huidige Tekst</p>
                         </div>
-                        <p id="old-text" class="text-gray-600 text-base font-medium">Het standaard mobiel abonnement kost €29,99 per maand.</p>
+                        <p id="old-text" class="text-text-main text-base font-medium">Het standaard mobiel abonnement kost €29,99 per maand.</p>
                     </div>
                 </div>
+
+                <!-- Arrow down indicator -->
+                <div class="flex justify-center">
+                    <span class="material-symbols-outlined text-primary text-2xl">arrow_downward</span>
+                </div>
+
+                <!-- New Text - Green border, black label -->
                 <div class="relative">
-                    <div class="absolute left-[1.3rem] -top-6 h-6 w-[2px] border-l-2 border-dashed border-primary-green/30"></div>
-                    <div class="bg-primary-green/5 rounded-xl p-5 border-2 border-primary-green/50 shadow-sm relative z-10">
+                    <div class="bg-primary-green/5 rounded-xl p-5 border-2 border-primary-green/50 shadow-soft">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center gap-2">
                                 <span class="material-symbols-outlined text-primary-green text-[20px]">auto_awesome</span>
-                                <p class="text-primary-green text-xs font-bold uppercase">Nieuwe Tekst</p>
+                                <p class="text-text-main text-xs font-bold uppercase">Nieuwe Tekst</p>
                             </div>
-                            <span class="bg-primary-green/20 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">AI</span>
+                            <button data-action="open-fulltext" class="text-primary text-xs font-semibold flex items-center gap-1 hover:underline">
+                                <span class="material-symbols-outlined text-sm">open_in_full</span>
+                                Bekijk volledig
+                            </button>
                         </div>
                         <p id="new-text" class="text-text-main text-lg font-medium">Het standaard mobiel abonnement kost <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">€34,99</span> per maand.</p>
                     </div>
                 </div>
-                <div data-navigate="screen-context-warning" class="mt-2 bg-orange-50 border border-orange-200 rounded-lg p-4 flex gap-3 items-start cursor-pointer hover:bg-orange-100">
+
+                <!-- Navigation Buttons -->
+                <div class="flex gap-3 mt-2">
+                    <button id="prev-variant-btn" class="flex-1 h-12 rounded-xl border-2 border-gray-200 text-text-sub font-bold flex items-center justify-center gap-2 hover:bg-gray-50 disabled:opacity-50" disabled>
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Vorige
+                    </button>
+                    <button id="next-variant-btn" class="flex-1 h-12 rounded-xl bg-primary/10 text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/20">
+                        Volgende
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+
+                <!-- Context Warning -->
+                <div data-navigate="screen-context-warning" class="mt-2 bg-orange-50 border border-orange-200 rounded-xl p-4 flex gap-3 items-start cursor-pointer hover:bg-orange-100">
                     <span class="material-symbols-outlined text-orange-600 shrink-0">warning</span>
                     <div>
                         <h4 class="text-orange-900 text-sm font-bold">Context waarschuwing</h4>
@@ -788,14 +826,222 @@
             </div>
         </main>
 
-        <!-- Bottom Actions - ABSOLUTE -->
+        <!-- Bottom Actions -->
         <div class="bottom-action-bar bg-white/95 backdrop-blur-md border-t border-gray-100 p-4 pb-8 shadow-lg">
+            <p class="text-xs text-text-sub text-center mb-3">Bekijk alle 4 varianten voordat je goedkeurt</p>
             <div class="flex flex-col gap-3">
-                <button data-navigate="screen-processing" class="flex w-full items-center justify-center rounded-lg h-12 bg-primary text-white gap-2 font-bold shadow-lg active:scale-[0.98]">
+                <button data-navigate="screen-processing" class="flex w-full items-center justify-center rounded-xl h-12 bg-primary text-white gap-2 font-bold shadow-lg active:scale-[0.98]">
                     <span class="material-symbols-outlined text-[20px]">check_circle</span>
-                    Goedkeuren & doorvoeren
+                    Alle 4 varianten goedkeuren
                 </button>
-                <button data-action="open-edit" class="flex w-full items-center justify-center rounded-lg h-12 border-2 border-gray-200 text-text-main gap-2 font-bold hover:bg-gray-50">
+                <button data-action="open-edit" class="flex w-full items-center justify-center rounded-xl h-12 border-2 border-gray-200 text-text-main gap-2 font-bold hover:bg-gray-50">
+                    <span class="material-symbols-outlined text-[20px]">edit</span>
+                    Aanpassen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== SCREEN: AI SUGGESTION (Legal Disclaimer) ==================== -->
+<div id="screen-ai-suggestion-legal" class="screen bg-background-light">
+    <div class="flex flex-col h-full overflow-hidden">
+        <header class="flex items-center justify-between bg-white pt-6 px-4 pb-4 border-b border-gray-100 shrink-0 z-10">
+            <button data-navigate="screen-approval-list" class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100">
+                <span class="material-symbols-outlined text-text-main">arrow_back</span>
+            </button>
+            <h2 class="text-text-main text-lg font-bold flex-1 text-center px-2">AI Wijzigingsvoorstel</h2>
+            <span class="material-symbols-outlined text-primary w-10">auto_awesome</span>
+        </header>
+
+        <main class="flex-1 overflow-y-auto p-4 pb-44">
+            <!-- Context Block -->
+            <div class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 mb-4">
+                <div class="flex items-start gap-3">
+                    <div class="size-12 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
+                        <span class="material-symbols-outlined">gavel</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <span class="text-xs font-bold text-blue-600 bg-blue-100 px-2 py-0.5 rounded-full">Legal</span>
+                        <h4 class="text-base font-bold text-text-main mt-1">Nieuwe disclaimer tekst</h4>
+                        <p class="text-sm text-text-sub mt-1">12 documenten beïnvloed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variant Navigation -->
+            <div class="flex flex-col items-center justify-center py-3">
+                <div class="flex items-center gap-4">
+                    <button class="size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
+                        <span class="material-symbols-outlined text-[24px]">chevron_left</span>
+                    </button>
+                    <h3 class="text-text-main text-xl font-bold">Variant 1 van 2</h3>
+                    <button class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20">
+                        <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+                    </button>
+                </div>
+                <div class="flex gap-2 mt-3">
+                    <div class="h-2 w-2 rounded-full bg-text-main"></div>
+                    <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-2">
+                <!-- Current Text -->
+                <div class="bg-white rounded-xl p-5 shadow-soft border border-gray-200">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="material-symbols-outlined text-gray-500 text-[18px]">history</span>
+                        <p class="text-gray-500 text-xs font-bold uppercase">Huidige Tekst</p>
+                    </div>
+                    <p class="text-text-main text-base font-medium">Alle rechten voorbehouden. Niets uit deze publicatie mag worden verveelvoudigd zonder schriftelijke toestemming.</p>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="material-symbols-outlined text-primary text-2xl">arrow_downward</span>
+                </div>
+
+                <!-- New Text -->
+                <div class="bg-primary-green/5 rounded-xl p-5 border-2 border-primary-green/50 shadow-soft">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary-green text-[20px]">auto_awesome</span>
+                            <p class="text-text-main text-xs font-bold uppercase">Nieuwe Tekst</p>
+                        </div>
+                        <button data-action="open-fulltext" class="text-primary text-xs font-semibold flex items-center gap-1 hover:underline">
+                            <span class="material-symbols-outlined text-sm">open_in_full</span>
+                            Bekijk volledig
+                        </button>
+                    </div>
+                    <p class="text-text-main text-lg font-medium">© 2025 Odido. Alle rechten voorbehouden. <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">Reproductie zonder voorafgaande schriftelijke toestemming is niet toegestaan conform artikel 16b Auteurswet.</span></p>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex gap-3 mt-2">
+                    <button class="flex-1 h-12 rounded-xl border-2 border-gray-200 text-text-sub font-bold flex items-center justify-center gap-2 opacity-50" disabled>
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Vorige
+                    </button>
+                    <button class="flex-1 h-12 rounded-xl bg-primary/10 text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/20">
+                        Volgende
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Actions -->
+        <div class="bottom-action-bar bg-white/95 backdrop-blur-md border-t border-gray-100 p-4 pb-8 shadow-lg">
+            <p class="text-xs text-text-sub text-center mb-3">Bekijk alle 2 varianten voordat je goedkeurt</p>
+            <div class="flex flex-col gap-3">
+                <button data-navigate="screen-processing" class="flex w-full items-center justify-center rounded-xl h-12 bg-primary text-white gap-2 font-bold shadow-lg active:scale-[0.98]">
+                    <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                    Alle 2 varianten goedkeuren
+                </button>
+                <button data-action="open-edit" class="flex w-full items-center justify-center rounded-xl h-12 border-2 border-gray-200 text-text-main gap-2 font-bold hover:bg-gray-50">
+                    <span class="material-symbols-outlined text-[20px]">edit</span>
+                    Aanpassen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== SCREEN: AI SUGGESTION (Q4 Campagne) ==================== -->
+<div id="screen-ai-suggestion-campagne" class="screen bg-background-light">
+    <div class="flex flex-col h-full overflow-hidden">
+        <header class="flex items-center justify-between bg-white pt-6 px-4 pb-4 border-b border-gray-100 shrink-0 z-10">
+            <button data-navigate="screen-approval-list" class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100">
+                <span class="material-symbols-outlined text-text-main">arrow_back</span>
+            </button>
+            <h2 class="text-text-main text-lg font-bold flex-1 text-center px-2">AI Wijzigingsvoorstel</h2>
+            <span class="material-symbols-outlined text-primary w-10">auto_awesome</span>
+        </header>
+
+        <main class="flex-1 overflow-y-auto p-4 pb-44">
+            <!-- Context Block -->
+            <div class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 mb-4">
+                <div class="flex items-start gap-3">
+                    <div class="size-12 rounded-lg bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                        <span class="material-symbols-outlined">campaign</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">Campagne</span>
+                        <h4 class="text-base font-bold text-text-main mt-1">Q4 Campagne teksten</h4>
+                        <p class="text-sm text-text-sub mt-1">28 documenten beïnvloed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variant Navigation -->
+            <div class="flex flex-col items-center justify-center py-3">
+                <div class="flex items-center gap-4">
+                    <button class="size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
+                        <span class="material-symbols-outlined text-[24px]">chevron_left</span>
+                    </button>
+                    <h3 class="text-text-main text-xl font-bold">Variant 1 van 3</h3>
+                    <button class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20">
+                        <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+                    </button>
+                </div>
+                <div class="flex gap-2 mt-3">
+                    <div class="h-2 w-2 rounded-full bg-text-main"></div>
+                    <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                    <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-2">
+                <!-- Current Text -->
+                <div class="bg-white rounded-xl p-5 shadow-soft border border-gray-200">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="material-symbols-outlined text-gray-500 text-[18px]">history</span>
+                        <p class="text-gray-500 text-xs font-bold uppercase">Huidige Tekst</p>
+                    </div>
+                    <p class="text-text-main text-base font-medium">Profiteer van onze zomeractie! Ontvang nu 50% korting op je eerste 3 maanden.</p>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="material-symbols-outlined text-primary text-2xl">arrow_downward</span>
+                </div>
+
+                <!-- New Text -->
+                <div class="bg-primary-green/5 rounded-xl p-5 border-2 border-primary-green/50 shadow-soft">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary-green text-[20px]">auto_awesome</span>
+                            <p class="text-text-main text-xs font-bold uppercase">Nieuwe Tekst</p>
+                        </div>
+                        <button data-action="open-fulltext" class="text-primary text-xs font-semibold flex items-center gap-1 hover:underline">
+                            <span class="material-symbols-outlined text-sm">open_in_full</span>
+                            Bekijk volledig
+                        </button>
+                    </div>
+                    <p class="text-text-main text-lg font-medium">Profiteer van onze <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">najaarsactie</span>! Ontvang nu <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">3 maanden gratis</span> bij een jaarabonnement.</p>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex gap-3 mt-2">
+                    <button class="flex-1 h-12 rounded-xl border-2 border-gray-200 text-text-sub font-bold flex items-center justify-center gap-2 opacity-50" disabled>
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Vorige
+                    </button>
+                    <button class="flex-1 h-12 rounded-xl bg-primary/10 text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/20">
+                        Volgende
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Actions -->
+        <div class="bottom-action-bar bg-white/95 backdrop-blur-md border-t border-gray-100 p-4 pb-8 shadow-lg">
+            <p class="text-xs text-text-sub text-center mb-3">Bekijk alle 3 varianten voordat je goedkeurt</p>
+            <div class="flex flex-col gap-3">
+                <button data-navigate="screen-processing" class="flex w-full items-center justify-center rounded-xl h-12 bg-primary text-white gap-2 font-bold shadow-lg active:scale-[0.98]">
+                    <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                    Alle 3 varianten goedkeuren
+                </button>
+                <button data-action="open-edit" class="flex w-full items-center justify-center rounded-xl h-12 border-2 border-gray-200 text-text-main gap-2 font-bold hover:bg-gray-50">
                     <span class="material-symbols-outlined text-[20px]">edit</span>
                     Aanpassen
                 </button>
@@ -2052,6 +2298,47 @@
     </div>
 </div>
 
+<!-- Fulltext Popup -->
+<div id="fulltext-popup" class="edit-popup">
+    <div class="bg-white rounded-2xl shadow-2xl w-[95%] max-w-md mx-4 max-h-[80vh] flex flex-col">
+        <div class="flex items-center justify-between p-4 border-b border-gray-100 shrink-0">
+            <h3 class="text-lg font-bold text-text-main">Volledige context</h3>
+            <button data-action="close-fulltext" class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4">
+            <div class="mb-4">
+                <p class="text-xs font-bold text-gray-500 uppercase mb-2">Document</p>
+                <p class="text-sm text-text-main font-medium">Algemene Voorwaarden 2024.pdf</p>
+            </div>
+            <div class="mb-4">
+                <p class="text-xs font-bold text-gray-500 uppercase mb-2">Locatie in document</p>
+                <p class="text-sm text-text-sub">Pagina 12, Sectie 4.2 - Tarieven</p>
+            </div>
+            <div class="mb-4">
+                <p class="text-xs font-bold text-gray-500 uppercase mb-2">Huidige tekst (volledige paragraaf)</p>
+                <div class="bg-gray-50 rounded-lg p-4 text-sm text-text-main leading-relaxed">
+                    <p>4.2 Tarieven en Abonnementen</p>
+                    <p class="mt-2">Het standaard mobiel abonnement kost €29,99 per maand. Dit tarief is exclusief eventuele kortingen en acties. Bij een jaarabonnement ontvangt u een korting van 10% op het maandelijkse tarief. Alle genoemde prijzen zijn inclusief BTW.</p>
+                    <p class="mt-2">Prijswijzigingen worden minimaal 30 dagen van tevoren aangekondigd via email of schriftelijk bericht.</p>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs font-bold text-gray-500 uppercase mb-2">Nieuwe tekst (volledige paragraaf)</p>
+                <div class="bg-primary-green/10 rounded-lg p-4 text-sm text-text-main leading-relaxed border border-primary-green/30">
+                    <p>4.2 Tarieven en Abonnementen</p>
+                    <p class="mt-2">Het standaard mobiel abonnement kost <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold">€34,99</span> per maand. Dit tarief is exclusief eventuele kortingen en acties. Bij een jaarabonnement ontvangt u een korting van 10% op het maandelijkse tarief. Alle genoemde prijzen zijn inclusief BTW.</p>
+                    <p class="mt-2">Prijswijzigingen worden minimaal 30 dagen van tevoren aangekondigd via email of schriftelijk bericht.</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border-t border-gray-100 shrink-0">
+            <button data-action="close-fulltext" class="w-full py-3 bg-primary text-white rounded-xl font-bold">Terug naar overzicht</button>
+        </div>
+    </div>
+</div>
+
             </div><!-- end mobile-container -->
         </div><!-- end iphone-screen -->
     </div><!-- end iphone-frame -->
@@ -2263,6 +2550,11 @@
             document.getElementById('next-variant').className = currentVariant === variants.length - 1
                 ? 'size-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
                 : 'size-8 flex items-center justify-center rounded-full bg-gray-100 text-text-main hover:bg-gray-200 cursor-pointer';
+            // Update prev/next buttons
+            const prevBtn = document.getElementById('prev-variant-btn');
+            const nextBtn = document.getElementById('next-variant-btn');
+            if (prevBtn) prevBtn.disabled = currentVariant === 0;
+            if (nextBtn) nextBtn.disabled = currentVariant === variants.length - 1;
         }
 
         function animateProgress() {
@@ -2318,6 +2610,8 @@
                     if (action === 'close-filter') document.getElementById('overlay-filter').classList.remove('active');
                     if (action === 'open-edit') document.getElementById('edit-popup').classList.add('active');
                     if (action === 'close-edit' || action === 'save-edit') document.getElementById('edit-popup').classList.remove('active');
+                    if (action === 'open-fulltext') document.getElementById('fulltext-popup').classList.add('active');
+                    if (action === 'close-fulltext') document.getElementById('fulltext-popup').classList.remove('active');
                     if (action === 'search-category') {
                         currentSearchQuery = this.getAttribute('data-query');
                         showScreen('screen-search-results');
@@ -2327,6 +2621,7 @@
 
             document.getElementById('overlay-filter')?.addEventListener('click', function(e) { if (e.target === this) this.classList.remove('active'); });
             document.getElementById('edit-popup')?.addEventListener('click', function(e) { if (e.target === this) this.classList.remove('active'); });
+            document.getElementById('fulltext-popup')?.addEventListener('click', function(e) { if (e.target === this) this.classList.remove('active'); });
 
             // Select all button
             document.getElementById('select-all-btn')?.addEventListener('click', toggleSelectAll);
@@ -2348,6 +2643,8 @@
 
             document.getElementById('prev-variant')?.addEventListener('click', function() { if (currentVariant > 0) { currentVariant--; updateVariant(); } });
             document.getElementById('next-variant')?.addEventListener('click', function() { if (currentVariant < variants.length - 1) { currentVariant++; updateVariant(); } });
+            document.getElementById('prev-variant-btn')?.addEventListener('click', function() { if (currentVariant > 0) { currentVariant--; updateVariant(); } });
+            document.getElementById('next-variant-btn')?.addEventListener('click', function() { if (currentVariant < variants.length - 1) { currentVariant++; updateVariant(); } });
         });
     </script>
 </body>
