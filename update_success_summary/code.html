@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Update Success Summary</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecc8",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-white text-slate-900 antialiased overflow-x-hidden selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-white">
+<!-- Navigation / Header -->
+<div class="flex items-center justify-between p-4 pt-6">
+<!-- Empty left for balance or logo could go here -->
+<div class="w-10"></div>
+<!-- Optional Logo or Context -->
+<div class="text-xs font-bold tracking-widest text-slate-300 uppercase">Odido CM</div>
+<!-- Close Action -->
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 hover:bg-slate-50 hover:text-slate-600 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 flex flex-col items-center px-6 pb-28">
+<!-- Hero Status Area -->
+<div class="flex flex-col items-center text-center w-full mb-8 animate-fade-in-up">
+<div class="relative mb-6">
+<!-- Circular Background for Robot -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent rounded-full blur-xl transform scale-150 opacity-50"></div>
+<!-- Robot Illustration -->
+<div class="relative w-48 h-48 bg-center bg-no-repeat bg-contain z-10" data-alt="Friendly robot character giving a thumbs up gesture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALjy-xSC-FC0mB-ayffykYofcKM1xkC0z2ZrEco7PIy_Aqki2UHV0lHHezClwmnyXj_2i80470-qqFPwS5PcYxOkwYy1qlRGKZpHNP3yJdEmwmPPWU3L_TUJwKdHJjdJqOBSVWC59A-TbQQVOhBpMPfFgjvMUQHIKqCglS0biZI1jg3uv3_SZ4D6YbY0tLkG8V1ZAJYhADqCd2SsCXsOfX5_41B4uBRpN2eGZB1Id6BPwmov_fJx8RD4WfT6E-c9guZ-c7CnVVVTN6');">
+</div>
+<!-- Success Badge Overlay -->
+<div class="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-lg z-20">
+<span class="material-symbols-outlined text-primary text-4xl filled" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<h1 class="text-[#111817] text-[32px] font-bold leading-tight tracking-tight mb-2">
+                    Wijziging doorgevoerd
+                </h1>
+<p class="text-slate-500 text-sm font-medium">Content Manager AI</p>
+</div>
+<!-- Summary Card -->
+<div class="w-full bg-background-light dark:bg-slate-50 rounded-2xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 mb-5">
+<div class="flex items-start justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined">cloud_sync</span>
+</div>
+<div>
+<p class="text-[#618983] text-xs font-bold uppercase tracking-wider mb-0.5">Samenvatting</p>
+<p class="text-[#111817] text-lg font-bold leading-none">47 documenten</p>
+</div>
+</div>
+</div>
+<!-- Breakdown List -->
+<div class="flex flex-col gap-5">
+<!-- Progress Item 1 -->
+<div>
+<div class="flex justify-between text-sm mb-2 items-end">
+<span class="font-semibold text-[#111817]">Brochures (PDF)</span>
+<span class="text-primary font-bold text-xs">22/22</span>
+</div>
+<div class="h-2 w-full bg-white rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width: 100%"></div>
+</div>
+</div>
+<!-- Progress Item 2 -->
+<div>
+<div class="flex justify-between text-sm mb-2 items-end">
+<span class="font-semibold text-[#111817]">Presentaties (PPTX)</span>
+<span class="text-primary font-bold text-xs">15/15</span>
+</div>
+<div class="h-2 w-full bg-white rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width: 100%"></div>
+</div>
+</div>
+<!-- Progress Item 3 -->
+<div>
+<div class="flex justify-between text-sm mb-2 items-end">
+<span class="font-semibold text-[#111817]">Overige (XLSX)</span>
+<span class="text-primary font-bold text-xs">10/10</span>
+</div>
+<div class="h-2 w-full bg-white rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warning Component -->
+<div class="w-full bg-[#fff8e6] border border-orange-100 rounded-xl p-4 flex gap-3 items-start mb-6 group cursor-pointer transition-colors hover:bg-[#fff2cc]">
+<div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center shrink-0 text-orange-600">
+<span class="material-symbols-outlined text-lg">priority_high</span>
+</div>
+<div class="flex-1 pt-0.5">
+<p class="text-[#111817] font-bold text-sm leading-tight mb-1 group-hover:underline decoration-orange-300 underline-offset-2">3 bestanden overgeslagen</p>
+<p class="text-orange-700 text-sm leading-snug">Handmatige actie vereist. Type wordt niet ondersteund door de AI.</p>
+</div>
+<span class="material-symbols-outlined text-orange-300 text-xl self-center">chevron_right</span>
+</div>
+<!-- Toggle Switch -->
+<div class="w-full flex items-center justify-between py-3 px-2">
+<div class="flex flex-col">
+<span class="text-[#111817] font-bold text-base">Verkoopteam informeren</span>
+<span class="text-slate-400 text-xs">Stuur notificatie via Slack</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-7 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+</div>
+<!-- Sticky Footer Button -->
+<div class="fixed bottom-0 left-0 right-0 p-4 pb-8 bg-gradient-to-t from-white via-white/95 to-transparent flex justify-center max-w-md mx-auto z-50">
+<button class="w-full bg-[#111817] hover:bg-black text-white font-bold py-4 rounded-full shadow-xl shadow-slate-200 transform transition active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Terug naar home</span>
+</button>
+</div>
+</div>
+</body></html>

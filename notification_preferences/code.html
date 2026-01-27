@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notification Preferences</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#745eed",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131121",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e1c2e",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-primary selection:text-white">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center px-4 h-14 justify-between">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight absolute left-1/2 -translate-x-1/2">Notificaties</h2>
+<div class="size-10"></div> <!-- Spacer for alignment -->
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col p-4 gap-6 max-w-lg mx-auto w-full pb-24">
+<!-- Section: Automatische meldingen -->
+<section class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider ml-1 mb-1">Automatische meldingen</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Toggle Item 1 -->
+<div class="flex items-center gap-4 px-4 py-3.5 justify-between group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Content generated</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Notify when AI completes a task</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-all duration-200"></div>
+</label>
+</div>
+</div>
+<!-- Toggle Item 2 -->
+<div class="flex items-center gap-4 px-4 py-3.5 justify-between group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">AI model updates</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">New capabilities available</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors duration-200">
+<input class="peer sr-only" type="checkbox"/>
+<div class="h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-all duration-200"></div>
+</label>
+</div>
+</div>
+<!-- Toggle Item 3 -->
+<div class="flex items-center gap-4 px-4 py-3.5 justify-between group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">System errors</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-all duration-200"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Team notificaties -->
+<section class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider ml-1 mb-1">Team notificaties</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Toggle Item 1 -->
+<div class="flex items-center gap-4 px-4 py-3.5 justify-between group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">New comments</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Feedback on your drafts</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-all duration-200"></div>
+</label>
+</div>
+</div>
+<!-- Toggle Item 2 -->
+<div class="flex items-center gap-4 px-4 py-3.5 justify-between group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Approval requests</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-all duration-200"></div>
+</label>
+</div>
+</div>
+<!-- Toggle Item 3 -->
+<div class="flex items-center gap-4 px-4 py-3.5 justify-between group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Team mentions</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">When someone @mentions you</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-all duration-200"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Ontvangstkanaal (Radio Group) -->
+<section class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider ml-1 mb-1">Ontvangstkanaal</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden divide-y divide-slate-100 dark:divide-slate-800" role="radiogroup">
+<!-- Radio Item 1 -->
+<label class="flex items-center gap-4 px-4 py-3.5 cursor-pointer group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="text-slate-500 dark:text-slate-400 group-has-[:checked]:text-primary transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Email only</p>
+</div>
+<div class="shrink-0 relative flex items-center justify-center">
+<input class="peer sr-only" name="channel" type="radio"/>
+<div class="h-5 w-5 rounded-full border-2 border-slate-300 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary transition-all duration-200"></div>
+<div class="absolute h-2 w-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200"></div>
+</div>
+</label>
+<!-- Radio Item 2 -->
+<label class="flex items-center gap-4 px-4 py-3.5 cursor-pointer group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="text-slate-500 dark:text-slate-400 group-has-[:checked]:text-primary transition-colors">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Slack only</p>
+</div>
+<div class="shrink-0 relative flex items-center justify-center">
+<input class="peer sr-only" name="channel" type="radio"/>
+<div class="h-5 w-5 rounded-full border-2 border-slate-300 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary transition-all duration-200"></div>
+<div class="absolute h-2 w-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200"></div>
+</div>
+</label>
+<!-- Radio Item 3 -->
+<label class="flex items-center gap-4 px-4 py-3.5 cursor-pointer group active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="text-slate-500 dark:text-slate-400 group-has-[:checked]:text-primary transition-colors">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Both (Email &amp; Slack)</p>
+</div>
+<div class="shrink-0 relative flex items-center justify-center">
+<input checked="" class="peer sr-only" name="channel" type="radio"/>
+<div class="h-5 w-5 rounded-full border-2 border-slate-300 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary transition-all duration-200"></div>
+<div class="absolute h-2 w-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200"></div>
+</div>
+</label>
+</div>
+</section>
+</main>
+<!-- Footer Action -->
+<div class="fixed bottom-0 left-0 w-full p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 z-20">
+<div class="max-w-lg mx-auto w-full">
+<button class="w-full flex items-center justify-center h-12 rounded-lg bg-primary text-white text-base font-semibold tracking-wide hover:bg-primary/90 active:scale-[0.98] transition-all shadow-lg shadow-primary/30">
+                Opslaan
+            </button>
+</div>
+</div>
+</body></html>

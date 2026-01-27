@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Odido Content Manager Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#533190",
+                        "primary-light": "#6A44A5",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#18141e",
+                        "text-main": "#141216",
+                        "text-sub": "#726a81",
+                        "input-bg": "#F7F6F8",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex flex-col justify-between overflow-x-hidden">
+<!-- Main Content Container -->
+<div class="flex-1 flex flex-col items-center w-full max-w-md mx-auto px-6 pt-12 pb-6 z-10 relative">
+<!-- Logo Section -->
+<div class="mb-8">
+<!-- Simulating Odido Logo with text/shapes as no external assets allowed to be sourced directly without URL -->
+<!-- In a real scenario, this would be an <img src="logo.svg"> -->
+<div class="h-12 w-auto flex items-center justify-center">
+<!-- Simple placeholder for the logo - text based for reliability -->
+<span class="text-3xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#e2007a]">Odido.</span>
+</div>
+</div>
+<!-- Text Header -->
+<div class="text-center w-full mb-8">
+<h1 class="text-text-main dark:text-white text-[28px] font-bold leading-tight mb-2">
+                Welkom bij <br/>Content Manager
+            </h1>
+<p class="text-text-sub dark:text-gray-400 text-base font-normal">
+                AI-gestuurde documentbeheer voor Odido
+            </p>
+</div>
+<!-- Login Form -->
+<form class="w-full flex flex-col gap-5">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-text-main dark:text-white text-sm font-semibold pl-1" for="email">E-mailadres</label>
+<div class="relative">
+<input class="w-full h-14 px-4 bg-input-bg dark:bg-[#2a2632] border-none rounded-lg text-text-main dark:text-white placeholder:text-text-sub focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-[#1f1b26] transition-all text-base" id="email" name="email" placeholder="naam@odido.nl" type="email"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-text-sub">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<label class="text-text-main dark:text-white text-sm font-semibold pl-1" for="password">Wachtwoord</label>
+<div class="relative">
+<input class="w-full h-14 px-4 bg-input-bg dark:bg-[#2a2632] border-none rounded-lg text-text-main dark:text-white placeholder:text-text-sub focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-[#1f1b26] transition-all text-base pr-12" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-4 text-text-sub hover:text-primary transition-colors focus:outline-none" type="button">
+<span class="material-symbols-outlined text-xl">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-4 flex flex-col gap-4">
+<button class="w-full h-14 rounded-lg bg-gradient-to-r from-primary to-primary-light text-white font-bold text-lg shadow-lg shadow-primary/30 hover:shadow-primary/50 active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="button">
+                    Inloggen
+                    <span class="material-symbols-outlined text-[20px]">login</span>
+</button>
+<a class="text-center text-sm font-medium text-primary hover:text-primary-light transition-colors" href="#">
+                    Wachtwoord vergeten?
+                </a>
+</div>
+</form>
+</div>
+<!-- Bottom Illustration Section -->
+<div class="w-full relative mt-auto">
+<!-- Abstract gradient background for illustration area -->
+<div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-gray-50 to-transparent dark:from-[#131018] -z-10"></div>
+<!-- Illustration Container -->
+<div class="w-full h-48 relative overflow-hidden flex items-end justify-center">
+<!-- Floating Elements (Simulating AI Sparkles & Docs) -->
+<!-- Document Left -->
+<div class="absolute bottom-[-10px] left-[10%] w-24 h-32 bg-white dark:bg-[#2a2632] rounded-xl shadow-xl transform -rotate-12 border border-gray-100 dark:border-gray-700 flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-4xl text-blue-400 opacity-80">description</span>
+</div>
+<!-- Document Right -->
+<div class="absolute bottom-[-20px] right-[10%] w-28 h-36 bg-white dark:bg-[#2a2632] rounded-xl shadow-xl transform rotate-6 border border-gray-100 dark:border-gray-700 flex items-center justify-center z-20">
+<span class="material-symbols-outlined text-5xl text-[#e2007a] opacity-80">analytics</span>
+</div>
+<!-- Central AI Orb/Sparkle -->
+<div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-gradient-to-tr from-cyan-400 to-primary blur-xl opacity-60 absolute"></div>
+<div class="w-12 h-12 rounded-full bg-white dark:bg-[#2a2632] shadow-lg flex items-center justify-center relative z-10 border border-purple-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-3xl text-primary bg-clip-text">auto_awesome</span>
+</div>
+</div>
+<!-- Small sparkle accents -->
+<span class="material-symbols-outlined absolute bottom-24 left-[25%] text-yellow-400 text-xl animate-pulse">star</span>
+<span class="material-symbols-outlined absolute bottom-32 right-[20%] text-cyan-400 text-sm animate-pulse" style="animation-delay: 0.5s;">star</span>
+<span class="material-symbols-outlined absolute bottom-16 right-[35%] text-primary text-xs animate-pulse" style="animation-delay: 1s;">circle</span>
+</div>
+</div>
+</body></html>

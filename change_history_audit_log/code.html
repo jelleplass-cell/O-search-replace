@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Change History Audit Log</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#533190",
+                        "primary-light": "#7c5ab8",
+                        "background-light": "#f3f4f6", 
+                        "background-dark": "#18141e",
+                        "card-dark": "#231f2a",
+                        "text-dark": "#e0e0e0",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="bg-white dark:bg-background-dark sticky top-0 z-50 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+<div class="flex items-center justify-between px-4 py-3">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-[#141216] dark:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-[#141216] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] text-center">
+                Wijzigingshistorie
+            </h1>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-[#141216] dark:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-[#dfdde3] dark:border-gray-700 px-4 justify-between mt-2">
+<button class="flex flex-col items-center justify-center border-b-[3px] border-primary pb-3 pt-2 flex-1 group">
+<span class="text-primary text-sm font-bold leading-normal tracking-[0.015em]">Alle</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent pb-3 pt-2 flex-1 hover:border-gray-300 dark:hover:border-gray-600 transition-colors group">
+<span class="text-[#726a81] dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">Deze week</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent pb-3 pt-2 flex-1 hover:border-gray-300 dark:hover:border-gray-600 transition-colors group">
+<span class="text-[#726a81] dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">Deze maand</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 pb-8 overflow-y-auto">
+<!-- Timeline Section: Vandaag -->
+<div class="mt-6">
+<h3 class="text-[#141216] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-3 ml-1">Vandaag</h3>
+<!-- Card 1 -->
+<div class="bg-white dark:bg-card-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 mb-3 flex gap-4 hover:border-primary/30 transition-all cursor-pointer group">
+<!-- User Avatar -->
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border-2 border-white dark:border-gray-600 shadow-sm" data-alt="Profile picture of J. Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4yDpc_1zI9DCz3MDcUZ93mgn3dhc3C7ZqC11r1wy3RjvTeOE4Xjt4AriPycfec6q20moIING778kofa--jP-DvdNOqiSbkQpmF0owGh4Nok6bBOfUciUPgd-8NzQohfG63M0GA5FsOm3R4N-aBBAieFNL0Wi7fEVMv3K0QlWtnP7pvliRtGaMdFQmPZiQaYU6MpZWTgv7QMIn9NpFQZEKMO5IxxPsqv0UuAvguMJuBN5hy90gjDh9nHsy3e0HOpjknC6wc8QIg-hh");'>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-green-500 h-3 w-3 rounded-full border-2 border-white dark:border-card-dark"></div>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-[#141216] dark:text-white text-base font-bold leading-tight truncate pr-2">
+                            Prijswijziging mobiel <span class="text-primary font-extrabold">€29,99 → €34,99</span>
+</p>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center rounded-md bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">
+<span class="material-symbols-outlined text-[14px] mr-1">description</span>
+                            2 doc
+                        </span>
+<p class="text-[#726a81] dark:text-gray-400 text-xs font-medium leading-normal">
+                            J. Doe • 14:30
+                        </p>
+</div>
+</div>
+<div class="shrink-0 self-center">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors text-[24px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-card-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 mb-3 flex gap-4 hover:border-primary/30 transition-all cursor-pointer group">
+<!-- User Avatar -->
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border-2 border-white dark:border-gray-600 shadow-sm" data-alt="Profile picture of M. Smit" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgMvPbvDA7UWA7_HlCAhZSlBangCSRsBmoEBj4eD5OR0f6QVy9HATNv_O2UtkYZ_4W2ih0uUCKOMd6eE9SVWZk2UIB9ZhYPoEd-EfVXsyKGihDDU5eO2ATUk_TyaJibDMq-bKwF2uv7XLnuUCrR8r2vyua3yflL8vpXval_Dk8Lkh4fxuI8jZlZ7j3Oj7Zd0kj5CHbvqJURJBFSCfL6G9dASHnN2NC5vWgSZJtRw2Cjgb94_mZASqsjZCQu6Gh9Pb0UJkg74w-E6QO");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<p class="text-[#141216] dark:text-white text-base font-bold leading-tight truncate">
+                        Nieuwe campagne visuals geüpload
+                    </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/30 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-400/20">
+<span class="material-symbols-outlined text-[14px] mr-1">imagesmode</span>
+                            5 assets
+                        </span>
+<p class="text-[#726a81] dark:text-gray-400 text-xs font-medium leading-normal">
+                            M. Smit • 11:15
+                        </p>
+</div>
+</div>
+<div class="shrink-0 self-center">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors text-[24px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Timeline Section: Gisteren -->
+<div class="mt-6">
+<h3 class="text-[#141216] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-3 ml-1">Gisteren</h3>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-card-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 mb-3 flex gap-4 hover:border-primary/30 transition-all cursor-pointer group">
+<!-- User Avatar -->
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border-2 border-white dark:border-gray-600 shadow-sm" data-alt="Profile picture of A. Jansen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiaP1q8NQeaY1byA_xdbekPJq5wKF-1eLuxAjSxyfJFAsris0OQ6awrNudlIIQdczSDU1opXnKp_ZRlqU6KU8QplcBiwR_7VAj1cCZqJZS0BCp_IknuIvkFnTXCjhCvQSegftn-Yq-h7XAON4nO3UYaNHrPTOsVC1sNHjxR3umjfLbW6rQlrqrfEBIEoJlZnYarcQPFQb_nMi8PrAHsoR02IQbkpuYEBI6LVpNhwKVWMezxT1BP_hWwimRI_6XzyOsra6pJjt3nuWP");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<p class="text-[#141216] dark:text-white text-base font-bold leading-tight truncate">
+                        Tekstcorrectie disclaimer
+                    </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-300 ring-1 ring-inset ring-gray-500/10">
+<span class="material-symbols-outlined text-[14px] mr-1">article</span>
+                            1 doc
+                        </span>
+<p class="text-[#726a81] dark:text-gray-400 text-xs font-medium leading-normal">
+                            A. Jansen • 09:45
+                        </p>
+</div>
+</div>
+<div class="shrink-0 self-center">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors text-[24px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Timeline Section: 23 Oktober -->
+<div class="mt-6">
+<h3 class="text-[#141216] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-3 ml-1">23 Oktober</h3>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-card-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 mb-3 flex gap-4 opacity-75 hover:opacity-100 transition-all cursor-pointer group">
+<!-- User Avatar -->
+<div class="relative shrink-0 flex items-center justify-center bg-primary/10 rounded-full h-12 w-12 text-primary border-2 border-white dark:border-gray-600">
+<span class="text-sm font-bold">JD</span>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<p class="text-[#141216] dark:text-white text-base font-bold leading-tight truncate">
+                        Productspecificaties geüpdatet
+                    </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center rounded-md bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">
+<span class="material-symbols-outlined text-[14px] mr-1">description</span>
+                            3 docs
+                        </span>
+<p class="text-[#726a81] dark:text-gray-400 text-xs font-medium leading-normal">
+                            J. Doe • 16:20
+                        </p>
+</div>
+</div>
+<div class="shrink-0 self-center">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors text-[24px]">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+</body></html>
