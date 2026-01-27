@@ -735,7 +735,7 @@
             <span class="material-symbols-outlined text-primary w-10">auto_awesome</span>
         </header>
 
-        <main class="flex-1 overflow-y-auto p-4 pb-44">
+        <main class="flex-1 overflow-y-auto p-4 pb-64">
             <!-- Context Block - Shows what task we're working on -->
             <div class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 mb-4">
                 <div class="flex items-start gap-3">
@@ -854,7 +854,7 @@
             <span class="material-symbols-outlined text-primary w-10">auto_awesome</span>
         </header>
 
-        <main class="flex-1 overflow-y-auto p-4 pb-44">
+        <main class="flex-1 overflow-y-auto p-4 pb-64">
             <!-- Context Block -->
             <div class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 mb-4">
                 <div class="flex items-start gap-3">
@@ -872,15 +872,15 @@
             <!-- Variant Navigation -->
             <div class="flex flex-col items-center justify-center py-3">
                 <div class="flex items-center gap-4">
-                    <button class="size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
+                    <button id="prev-variant-legal" class="size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
                         <span class="material-symbols-outlined text-[24px]">chevron_left</span>
                     </button>
-                    <h3 class="text-text-main text-xl font-bold">Variant 1 van 2</h3>
-                    <button class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20">
+                    <h3 class="text-text-main text-xl font-bold">Variant <span id="current-variant-legal">1</span> van 2</h3>
+                    <button id="next-variant-legal" class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20">
                         <span class="material-symbols-outlined text-[24px]">chevron_right</span>
                     </button>
                 </div>
-                <div class="flex gap-2 mt-3">
+                <div class="flex gap-2 mt-3" id="variant-dots-legal">
                     <div class="h-2 w-2 rounded-full bg-text-main"></div>
                     <div class="h-2 w-2 rounded-full bg-gray-300"></div>
                 </div>
@@ -893,7 +893,7 @@
                         <span class="material-symbols-outlined text-gray-500 text-[18px]">history</span>
                         <p class="text-gray-500 text-xs font-bold uppercase">Huidige Tekst</p>
                     </div>
-                    <p class="text-text-main text-base font-medium">Alle rechten voorbehouden. Niets uit deze publicatie mag worden verveelvoudigd zonder schriftelijke toestemming.</p>
+                    <p id="old-text-legal" class="text-text-main text-base font-medium">Alle rechten voorbehouden. Niets uit deze publicatie mag worden verveelvoudigd zonder schriftelijke toestemming.</p>
                 </div>
 
                 <div class="flex justify-center">
@@ -912,16 +912,16 @@
                             Bekijk volledig
                         </button>
                     </div>
-                    <p class="text-text-main text-lg font-medium">© 2025 Odido. Alle rechten voorbehouden. <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">Reproductie zonder voorafgaande schriftelijke toestemming is niet toegestaan conform artikel 16b Auteurswet.</span></p>
+                    <p id="new-text-legal" class="text-text-main text-lg font-medium">© 2025 Odido. Alle rechten voorbehouden. <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">Reproductie zonder voorafgaande schriftelijke toestemming is niet toegestaan conform artikel 16b Auteurswet.</span></p>
                 </div>
 
                 <!-- Navigation Buttons -->
                 <div class="flex gap-3 mt-2">
-                    <button class="flex-1 h-12 rounded-xl border-2 border-gray-200 text-text-sub font-bold flex items-center justify-center gap-2 opacity-50" disabled>
+                    <button id="prev-variant-btn-legal" class="flex-1 h-12 rounded-xl border-2 border-gray-200 text-text-sub font-bold flex items-center justify-center gap-2 hover:bg-gray-50 disabled:opacity-50" disabled>
                         <span class="material-symbols-outlined">arrow_back</span>
                         Vorige
                     </button>
-                    <button class="flex-1 h-12 rounded-xl bg-primary/10 text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/20">
+                    <button id="next-variant-btn-legal" class="flex-1 h-12 rounded-xl bg-primary/10 text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/20">
                         Volgende
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </button>
@@ -957,7 +957,7 @@
             <span class="material-symbols-outlined text-primary w-10">auto_awesome</span>
         </header>
 
-        <main class="flex-1 overflow-y-auto p-4 pb-44">
+        <main class="flex-1 overflow-y-auto p-4 pb-64">
             <!-- Context Block -->
             <div class="bg-white rounded-xl p-4 shadow-soft border border-gray-100 mb-4">
                 <div class="flex items-start gap-3">
@@ -975,15 +975,15 @@
             <!-- Variant Navigation -->
             <div class="flex flex-col items-center justify-center py-3">
                 <div class="flex items-center gap-4">
-                    <button class="size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
+                    <button id="prev-variant-campagne" class="size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed">
                         <span class="material-symbols-outlined text-[24px]">chevron_left</span>
                     </button>
-                    <h3 class="text-text-main text-xl font-bold">Variant 1 van 3</h3>
-                    <button class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20">
+                    <h3 class="text-text-main text-xl font-bold">Variant <span id="current-variant-campagne">1</span> van 3</h3>
+                    <button id="next-variant-campagne" class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20">
                         <span class="material-symbols-outlined text-[24px]">chevron_right</span>
                     </button>
                 </div>
-                <div class="flex gap-2 mt-3">
+                <div class="flex gap-2 mt-3" id="variant-dots-campagne">
                     <div class="h-2 w-2 rounded-full bg-text-main"></div>
                     <div class="h-2 w-2 rounded-full bg-gray-300"></div>
                     <div class="h-2 w-2 rounded-full bg-gray-300"></div>
@@ -997,7 +997,7 @@
                         <span class="material-symbols-outlined text-gray-500 text-[18px]">history</span>
                         <p class="text-gray-500 text-xs font-bold uppercase">Huidige Tekst</p>
                     </div>
-                    <p class="text-text-main text-base font-medium">Profiteer van onze zomeractie! Ontvang nu 50% korting op je eerste 3 maanden.</p>
+                    <p id="old-text-campagne" class="text-text-main text-base font-medium">Profiteer van onze zomeractie! Ontvang nu 50% korting op je eerste 3 maanden.</p>
                 </div>
 
                 <div class="flex justify-center">
@@ -1016,16 +1016,16 @@
                             Bekijk volledig
                         </button>
                     </div>
-                    <p class="text-text-main text-lg font-medium">Profiteer van onze <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">najaarsactie</span>! Ontvang nu <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">3 maanden gratis</span> bij een jaarabonnement.</p>
+                    <p id="new-text-campagne" class="text-text-main text-lg font-medium">Profiteer van onze <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">najaarsactie</span>! Ontvang nu <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">3 maanden gratis</span> bij een jaarabonnement.</p>
                 </div>
 
                 <!-- Navigation Buttons -->
                 <div class="flex gap-3 mt-2">
-                    <button class="flex-1 h-12 rounded-xl border-2 border-gray-200 text-text-sub font-bold flex items-center justify-center gap-2 opacity-50" disabled>
+                    <button id="prev-variant-btn-campagne" class="flex-1 h-12 rounded-xl border-2 border-gray-200 text-text-sub font-bold flex items-center justify-center gap-2 hover:bg-gray-50 disabled:opacity-50" disabled>
                         <span class="material-symbols-outlined">arrow_back</span>
                         Vorige
                     </button>
-                    <button class="flex-1 h-12 rounded-xl bg-primary/10 text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/20">
+                    <button id="next-variant-btn-campagne" class="flex-1 h-12 rounded-xl bg-primary/10 text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/20">
                         Volgende
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </button>
@@ -2345,7 +2345,7 @@
 
     <!-- JavaScript -->
     <script>
-        // Variant data
+        // Variant data - Mobiel prijswijziging (4 variants)
         const variants = [
             { old: "Het standaard mobiel abonnement kost €29,99 per maand.", new: 'Het standaard mobiel abonnement kost <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">€34,99</span> per maand.' },
             { old: "Onze populaire bundel voor €29,99 bevat onbeperkt bellen.", new: 'Onze populaire bundel voor <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">€34,99</span> bevat onbeperkt bellen.' },
@@ -2353,6 +2353,21 @@
             { old: "Sim-only vanaf €29,99 per maand.", new: 'Sim-only vanaf <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">€34,99</span> per maand.' }
         ];
         let currentVariant = 0;
+
+        // Variant data - Legal disclaimer (2 variants)
+        const variantsLegal = [
+            { old: "Alle rechten voorbehouden. Niets uit deze publicatie mag worden verveelvoudigd zonder schriftelijke toestemming.", new: '© 2025 Odido. Alle rechten voorbehouden. <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">Reproductie zonder voorafgaande schriftelijke toestemming is niet toegestaan conform artikel 16b Auteurswet.</span>' },
+            { old: "De informatie in dit document is met zorg samengesteld maar kan onjuistheden bevatten.", new: 'De informatie in dit document is met zorg samengesteld. <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">Odido aanvaardt geen aansprakelijkheid voor eventuele onjuistheden of onvolledigheden. Raadpleeg altijd de meest recente versie op odido.nl.</span>' }
+        ];
+        let currentVariantLegal = 0;
+
+        // Variant data - Q4 Campagne (3 variants)
+        const variantsCampagne = [
+            { old: "Profiteer van onze zomeractie! Ontvang nu 50% korting op je eerste 3 maanden.", new: 'Profiteer van onze <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">najaarsactie</span>! Ontvang nu <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">3 maanden gratis</span> bij een jaarabonnement.' },
+            { old: "Alleen deze zomer: gratis Samsung Galaxy Buds bij elk abonnement.", new: 'Alleen dit <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">najaar</span>: <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">gratis Apple AirPods</span> bij elk abonnement.' },
+            { old: "Zomeractie: dubbele data voor dezelfde prijs!", new: '<span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">Q4 Actie</span>: <span class="bg-primary-green/30 text-green-900 px-1 rounded font-bold border-b-2 border-primary-green">onbeperkte data</span> voor dezelfde prijs!' }
+        ];
+        let currentVariantCampagne = 0;
 
         // Category-based search results data
         const categoryResults = {
@@ -2453,6 +2468,8 @@
             }
             if (screenId === 'screen-processing') animateProgress();
             if (screenId === 'screen-ai-suggestion') { currentVariant = 0; updateVariant(); }
+            if (screenId === 'screen-ai-suggestion-legal') { currentVariantLegal = 0; updateVariantLegal(); }
+            if (screenId === 'screen-ai-suggestion-campagne') { currentVariantCampagne = 0; updateVariantCampagne(); }
             if (screenId === 'screen-search-results') renderSearchResults(currentSearchQuery);
         }
 
@@ -2542,19 +2559,61 @@
             document.getElementById('new-text').innerHTML = variants[currentVariant].new;
             const dots = document.getElementById('variant-dots').children;
             for (let i = 0; i < dots.length; i++) {
-                dots[i].className = i === currentVariant ? 'h-1.5 w-1.5 rounded-full bg-text-main' : 'h-1.5 w-1.5 rounded-full bg-gray-300';
+                dots[i].className = i === currentVariant ? 'h-2 w-2 rounded-full bg-text-main' : 'h-2 w-2 rounded-full bg-gray-300';
             }
             document.getElementById('prev-variant').className = currentVariant === 0
-                ? 'size-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
-                : 'size-8 flex items-center justify-center rounded-full bg-gray-100 text-text-main hover:bg-gray-200 cursor-pointer';
+                ? 'size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
+                : 'size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer';
             document.getElementById('next-variant').className = currentVariant === variants.length - 1
-                ? 'size-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
-                : 'size-8 flex items-center justify-center rounded-full bg-gray-100 text-text-main hover:bg-gray-200 cursor-pointer';
+                ? 'size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
+                : 'size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer';
             // Update prev/next buttons
             const prevBtn = document.getElementById('prev-variant-btn');
             const nextBtn = document.getElementById('next-variant-btn');
             if (prevBtn) prevBtn.disabled = currentVariant === 0;
             if (nextBtn) nextBtn.disabled = currentVariant === variants.length - 1;
+        }
+
+        function updateVariantLegal() {
+            document.getElementById('current-variant-legal').textContent = currentVariantLegal + 1;
+            document.getElementById('old-text-legal').textContent = variantsLegal[currentVariantLegal].old;
+            document.getElementById('new-text-legal').innerHTML = variantsLegal[currentVariantLegal].new;
+            const dots = document.getElementById('variant-dots-legal').children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = i === currentVariantLegal ? 'h-2 w-2 rounded-full bg-text-main' : 'h-2 w-2 rounded-full bg-gray-300';
+            }
+            document.getElementById('prev-variant-legal').className = currentVariantLegal === 0
+                ? 'size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
+                : 'size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer';
+            document.getElementById('next-variant-legal').className = currentVariantLegal === variantsLegal.length - 1
+                ? 'size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
+                : 'size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer';
+            // Update prev/next buttons
+            const prevBtn = document.getElementById('prev-variant-btn-legal');
+            const nextBtn = document.getElementById('next-variant-btn-legal');
+            if (prevBtn) prevBtn.disabled = currentVariantLegal === 0;
+            if (nextBtn) nextBtn.disabled = currentVariantLegal === variantsLegal.length - 1;
+        }
+
+        function updateVariantCampagne() {
+            document.getElementById('current-variant-campagne').textContent = currentVariantCampagne + 1;
+            document.getElementById('old-text-campagne').textContent = variantsCampagne[currentVariantCampagne].old;
+            document.getElementById('new-text-campagne').innerHTML = variantsCampagne[currentVariantCampagne].new;
+            const dots = document.getElementById('variant-dots-campagne').children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = i === currentVariantCampagne ? 'h-2 w-2 rounded-full bg-text-main' : 'h-2 w-2 rounded-full bg-gray-300';
+            }
+            document.getElementById('prev-variant-campagne').className = currentVariantCampagne === 0
+                ? 'size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
+                : 'size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer';
+            document.getElementById('next-variant-campagne').className = currentVariantCampagne === variantsCampagne.length - 1
+                ? 'size-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 cursor-not-allowed'
+                : 'size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer';
+            // Update prev/next buttons
+            const prevBtn = document.getElementById('prev-variant-btn-campagne');
+            const nextBtn = document.getElementById('next-variant-btn-campagne');
+            if (prevBtn) prevBtn.disabled = currentVariantCampagne === 0;
+            if (nextBtn) nextBtn.disabled = currentVariantCampagne === variantsCampagne.length - 1;
         }
 
         function animateProgress() {
@@ -2641,10 +2700,23 @@
                 searchInput.addEventListener('blur', function() { setTimeout(() => document.getElementById('search-dropdown').classList.remove('active'), 200); });
             }
 
+            // Mobiel variant navigation
             document.getElementById('prev-variant')?.addEventListener('click', function() { if (currentVariant > 0) { currentVariant--; updateVariant(); } });
             document.getElementById('next-variant')?.addEventListener('click', function() { if (currentVariant < variants.length - 1) { currentVariant++; updateVariant(); } });
             document.getElementById('prev-variant-btn')?.addEventListener('click', function() { if (currentVariant > 0) { currentVariant--; updateVariant(); } });
             document.getElementById('next-variant-btn')?.addEventListener('click', function() { if (currentVariant < variants.length - 1) { currentVariant++; updateVariant(); } });
+
+            // Legal variant navigation
+            document.getElementById('prev-variant-legal')?.addEventListener('click', function() { if (currentVariantLegal > 0) { currentVariantLegal--; updateVariantLegal(); } });
+            document.getElementById('next-variant-legal')?.addEventListener('click', function() { if (currentVariantLegal < variantsLegal.length - 1) { currentVariantLegal++; updateVariantLegal(); } });
+            document.getElementById('prev-variant-btn-legal')?.addEventListener('click', function() { if (currentVariantLegal > 0) { currentVariantLegal--; updateVariantLegal(); } });
+            document.getElementById('next-variant-btn-legal')?.addEventListener('click', function() { if (currentVariantLegal < variantsLegal.length - 1) { currentVariantLegal++; updateVariantLegal(); } });
+
+            // Campagne variant navigation
+            document.getElementById('prev-variant-campagne')?.addEventListener('click', function() { if (currentVariantCampagne > 0) { currentVariantCampagne--; updateVariantCampagne(); } });
+            document.getElementById('next-variant-campagne')?.addEventListener('click', function() { if (currentVariantCampagne < variantsCampagne.length - 1) { currentVariantCampagne++; updateVariantCampagne(); } });
+            document.getElementById('prev-variant-btn-campagne')?.addEventListener('click', function() { if (currentVariantCampagne > 0) { currentVariantCampagne--; updateVariantCampagne(); } });
+            document.getElementById('next-variant-btn-campagne')?.addEventListener('click', function() { if (currentVariantCampagne < variantsCampagne.length - 1) { currentVariantCampagne++; updateVariantCampagne(); } });
         });
     </script>
 </body>
